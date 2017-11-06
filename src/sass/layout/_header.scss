@@ -1,0 +1,12 @@
+.header {
+  background-color: #08088a;
+
+  &_wrapper {
+    @include wrapper(640px, 0);
+  }
+
+  &_txt {
+    font-size: 16px;
+    color: #fff;
+  }
+}

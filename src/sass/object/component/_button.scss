@@ -1,0 +1,10 @@
+.c-btn {
+  display: inline-block;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

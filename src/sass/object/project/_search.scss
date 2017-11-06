@@ -1,0 +1,201 @@
+.p-search {
+
+  &_wrapper {
+    @include wrapper(640px, 0);
+  }
+
+  &_link {
+    display: inline-block;
+
+    &_wrapper {
+      width: 100%;
+      padding: 7px 7px 12px;
+      position: relative;
+    }
+  }
+
+  &_cap {
+    line-height: 30px;
+    color: #000;
+    font: {
+      size: 16px;
+      weight: bold;
+    }
+  }
+
+  &_btn {
+    padding: 12px;
+    background-color: #f04;
+
+    &_list {
+      display: inline-block;
+
+      & >li:nth-child(n+2) {
+        margin: {
+          left: 5px;
+        }
+      }
+    }
+
+    &_cap {
+      color: #fff;
+      font-size: 8px;
+    }
+  }
+
+  &_confirmreservation {
+    background-color: #fe6d00;
+    padding: 12px;
+  }
+
+  &_inner {
+    // display: none;
+    width: 640px;
+    position: absolute;
+    background-color: #f04;
+    box-shadow: 0 -2px 6px #888;
+  }
+
+  &_setconditions {
+    &_list {
+      & > li {
+        padding: 14px;
+        color: #fff;
+        font-size: 16px;
+
+        &:nth-child(n+2) {
+          border-top: 1px solid #fff;
+        }
+      }
+    }
+
+    &_txt {
+      width: 15%;
+    }
+
+    &_selected {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &_list {
+        width: 40%;
+      }
+    }
+
+    &_reset {
+      display: inline-block;
+      color: #f04;
+      background-color: #fff;
+      border-radius: 50%;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_select {
+    &_list {
+      width: 100%;
+      padding: 0 11px;
+
+      & > li {
+        display: inline-block;
+        width: 50%;
+        padding: 0 3px;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_txt {
+      padding: 4px;
+      margin: 7px 0;
+      color: #000;
+      background-color: #fff;
+      border-top: {
+        left-radius: 4px;
+        right-radius: 4px;
+      }
+      font: {
+        size: 16px;
+        weight: bold;
+      }
+    }
+
+    &_arr {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: {
+        top: 3px;
+      }
+      transform: rotate(45deg);
+      border: {
+        top: 2px solid #666;
+        right: 2px solid #666;
+      }
+    }
+  }
+
+  &_region {
+    padding: 10px;
+
+    &_list {
+      width: 100%;
+      background-color: #fff;
+
+      & > li {
+        color: #000;
+        font-size: 14px;
+        border-bottom: 1px solid #666;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &_cities {
+    &_list {
+      padding: 0 14px;
+    }
+  }
+  &_checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f04;
+    color: #fff;
+    position: relative;
+
+    &::after {
+      width: 8px;
+      height: 10px;
+      border: {
+        left: 2px solid #fff;
+        bottom: 2px solid #fff;
+      }
+      transform: rotate(45deg);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+}
+
+.is-select {
+  padding: 11px;
+  margin: 0;
+}
+
+.is-checked {
+  background-color: #f04;
+}

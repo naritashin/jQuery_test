@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
@@ -19,7 +19,8 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('default', ['sass', 'browser-sync'], function() {
-  gulp.watch('./src/sass/**/*.scss', ['sass']).on('change', reload);
+  gulp.watch('./src/sass/app.scss', ['sass']);
+  gulp.watch('./css/app.css').on('change', reload);
   gulp.watch('./**/*.html').on('change', reload);
   gulp.watch('./src/javascripts/**/*.js').on('change', reload);
 });

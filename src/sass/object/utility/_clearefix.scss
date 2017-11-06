@@ -1,0 +1,16 @@
+.u-cf {
+  &::before,
+  &::after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+}
+
+.u-fl {
+  float: left;
+}
+
+.u-fr {
+  float: right;
+}

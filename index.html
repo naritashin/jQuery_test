@@ -19,112 +19,132 @@
   <main>
     <section class="p-search">
       <div class="p-search_wrapper">
-        <figure　class="p-search_img">
-          <a href="" class="p-search_link">
-            <img src="" alt="" class="p-search_img_content">
-            <figcaption class="p-search_cap">海外レストラン</figcaption>
-          </a>
-        </figure>
 
-        <ul class="p-search_btn_list">
-          <li>
-            <figure class="c-btn p-search_btn">
-              <a>
-                <img src="" alt="">
-                <figcaption class="p-search_btn_cap">探す</figcaption>
-              </a>
-            </figure>
-          </li>
-          <li>
-            <figure class="c-btn p-search_confirm_reservation">
-              <a href="">
-                <img src="" alt="">
-                <figcaption class="p-search_btn_cap">予約確認</figcaption>
-              </a>
-            </figure>
-          </li>
-        </ul>
+        <div class="p-search_link_wrapper u-cf">
+          <figure　class="p-search_img u-fl">
+            <a href="" class="p-search_link">
+              <img src="" alt="" class="p-search_img_content">
+              <figcaption class="p-search_cap">海外レストラン</figcaption>
+            </a>
+          </figure>
+
+          <ul class="p-search_btn_list u-fr">
+            <li class="u-fl">
+              <figure class="c-btn p-search_btn">
+                <a>
+                  <img src="" alt="">
+                  <figcaption class="p-search_btn_cap">探す</figcaption>
+                </a>
+              </figure>
+            </li>
+            <li class="u-fl">
+              <figure class="c-btn p-search_confirmreservation">
+                <a href="">
+                  <img src="" alt="">
+                  <figcaption class="p-search_btn_cap">予約確認</figcaption>
+                </a>
+              </figure>
+            </li>
+          </ul>
+        </div>
 
         <div class="p-search_inner">
           <ul class="p-search_setconditions_list">
-            <li>
-              <p class="p-search_setconditions_cities">都市</p>
-              <ul class="p-search_setconditions_selected_list js-cities">
-              </ul>
-            </li>
-            <li>
-              <p class="p-search_setconditions_refine">絞込み</p>
-              <ul class="p-search_setconditions_selected_list js-refine">
-              </ul>
-            </li>
-          </ul>
-          <ul class="p-search_select_list">
-            <li>
-              <a>
-                <p class="p-search_select_txt">都市を選ぶ</p>
-              </a>
-
-<!-- jsonにregionとcityを作ってappendしたほうが楽だし運用しやすいんじゃね -->
-              <ul class="p-search_region_list">
+            <li class="u-cf">
+              <p class="p-search_setconditions_txt u-fl">都市</p>
+              <ul class="p-search_setconditions_selected_list u-fl js-cities">
                 <li>
-                  <p class="p-search_region js-region"></p>
-                  <ul class="p-search_cities_list"></ul>
+                  <p class="p-search_setconditions_selected">(条件未設定)</p>
                 </li>
               </ul>
+              <span class="p-search_setconditions_reset u-fr">ｘ</span>
             </li>
-            <li>
-              <a>
-                <p class="p-search_select_txt">条件を絞り込む</p>
-              </a>
-<!-- jsonにgenre,hotword,atomosphere作る -->
-              <form>
-                <ul class="p-search_refine_list">
+            <li class="u-cf">
+              <p class="p-search_setconditions_txt u-fl">絞込み</p>
+              <ul class="p-search_setconditions_selected_list u-fl js-refine">
+                <li>
+                  <p class="p-search_setconditions_selected">(条件未設定)</p>
+                </li>
+              </ul>
+              <span class="p-search_setconditions_reset u-fr">ｘ</span>
+            </li>
+          </ul>
+
+          <form>
+            <ul class="p-search_select_list">
+              <li class="js-select">
+                <a>
+                  <p class="p-search_select_txt is-select">都市を選ぶ</p>
+                </a>
+              </li>
+              <li class="js-select">
+                <a>
+                  <p class="p-search_select_txt">条件を絞り込む</p>
+                </a>
+              </li>
+            </ul>
+
+            <!-- jsonにregionとcityを作ってappendしたほうが楽だし運用しやすいんじゃね -->
+            <ul class="p-search_region_list">
+              <li class=" js-region">
+                <p class="p-search_region u-cf">region<span class="p-search_select_arr u-fr"></span></p>
+                <ul class="p-search_cities_list">
                   <li>
-                    <p>ジャンル</p>
-                    <ul class="p-search_genre_list"></ul>
-                  </li>
-                  <li>
-                    <p>予算</p>
-                      <select name="budget-low">
-                        <option value="none">下限なし</option>
-                        <option value="1000">1,000円</option>
-                        <option value="2000">2,000円</option>
-                        <option value="3000">3,000円</option>
-                        <option value="4000">4,000円</option>
-                        <option value="5000">5,000円</option>
-                        <option value="7000">7,000円</option>
-                        <option value="10000">10,000円</option>
-                        <option value="20000">20,000円</option>
-                        <option value="30000">30,000円</option>
-                      </select>
-                      <span>～</span>
-                      <select name="budget-high">
-                        <option value="1000">1,000円</option>
-                        <option value="2000">2,000円</option>
-                        <option value="3000">3,000円</option>
-                        <option value="4000">4,000円</option>
-                        <option value="5000">5,000円</option>
-                        <option value="7000">7,000円</option>
-                        <option value="10000">10,000円</option>
-                        <option value="20000">20,000円</option>
-                        <option value="30000">30,000円</option>
-                        <option value="none">上限なし</option>
-                      </select>
-                  </li>
-                  <li>
-                    <p>用途・雰囲気</p>
-                    <ul class="p-search_atmosphere_list"></ul>
-                  </li>
-                  <li>
-                    <p>HOTワード</p>
-                    <ul class="p-search_hotword_list"></ul>
+                    <input type="checkbox" id="cities"><label for="cities"><span class="p-search_checkbox is-checked"></span>cities</label>
                   </li>
                 </ul>
               </li>
             </ul>
+
+            <!-- jsonにgenre,hotword,atomosphere作る -->
+            <ul class="p-search_refine_list">
+              <li>
+                <p>ジャンル</p>
+                <ul class="p-search_genre_list"></ul>
+              </li>
+              <li>
+                <p>予算</p>
+                <select name="budget-low">
+                  <option value="none" selected>下限なし</option>
+                  <option value="1000">1,000円</option>
+                  <option value="2000">2,000円</option>
+                  <option value="3000">3,000円</option>
+                  <option value="4000">4,000円</option>
+                  <option value="5000">5,000円</option>
+                  <option value="7000">7,000円</option>
+                  <option value="10000">10,000円</option>
+                  <option value="20000">20,000円</option>
+                  <option value="30000">30,000円</option>
+                </select>
+                <span>～</span>
+                <select name="budget-up">
+                  <option value="1000">1,000円</option>
+                  <option value="2000">2,000円</option>
+                  <option value="3000">3,000円</option>
+                  <option value="4000">4,000円</option>
+                  <option value="5000">5,000円</option>
+                  <option value="7000">7,000円</option>
+                  <option value="10000">10,000円</option>
+                  <option value="20000">20,000円</option>
+                  <option value="30000">30,000円</option>
+                  <option value="none" selected>上限なし</option>
+                </select>
+              </li>
+              <li>
+                <p>用途・雰囲気</p>
+                <ul class="p-search_atmosphere_list"></ul>
+              </li>
+              <li>
+                <p>HOTワード</p>
+                <ul class="p-search_hotword_list">
+                </ul>
+              </li>
+            </ul>
+
             <button type="submit" class="c-btn p-search_searchbtn">探す</button>
           </form>
           <button class="c-btn p-search_location">現在地から探す</button>
+          <button class="c-btn p-search_close"><span class="p-search_close_icon">ｘ</span>閉じる</button>
         </div>
 
       </div>

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+a {
+  font: {
+    size: 0;
+  }
+  text: {
+    decoration: none;
+  }
+}
+
+input {
+  display: none;
+}
