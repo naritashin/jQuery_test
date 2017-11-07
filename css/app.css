@@ -117,6 +117,7 @@ select {
   padding: 12px; }
 
 .p-search_inner {
+  display: none;
   width: 640px;
   padding-bottom: 15px;
   background-color: #f04;
@@ -193,6 +194,13 @@ select {
       .p-search_region_list > li:hover, .p-search_refine_list > li:hover {
         cursor: pointer; }
 
+.p-search_cities_list {
+  display: none; }
+
+.p-search_cities_name {
+  display: inline-block;
+  width: 200px; }
+
 .p-search_label {
   display: inline-block;
   width: 100%;
@@ -217,19 +225,19 @@ select {
     top: 10%;
     content: ''; }
 
-.p-search_refine_list {
-  display: block; }
-  .p-search_refine_list > li {
-    padding: 10px; }
-    .p-search_refine_list > li:nth-child(2):hover {
-      cursor: default; }
+.p-search_refine_list > li:nth-child(2):hover {
+  cursor: default; }
 
 .p-search_refine_type {
+  padding: 10px; }
+
+.p-search_genre_list, .p-search_atmosphere_list, .p-search_hotword_list {
+  display: none;
   margin-bottom: 10px; }
 
 .p-search_select {
   width: 40%;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
   font-size: 16px; }
 
 .p-search_searchbtn, .p-search_location {
