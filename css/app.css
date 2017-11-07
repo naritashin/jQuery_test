@@ -56,6 +56,13 @@ a {
 input {
   display: none; }
 
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none; }
+
 .header {
   background-color: #08088a; }
   .header_wrapper {
@@ -178,34 +185,52 @@ input {
 
 .p-search_region {
   padding: 10px; }
-  .p-search_region_list {
+  .p-search_region_list, .p-search_refine_list {
+    display: none;
     width: 100%;
     background-color: #fff; }
-    .p-search_region_list > li {
+    .p-search_region_list > li, .p-search_refine_list > li {
       color: #000;
       font-size: 14px;
-      border-bottom: 1px solid #666; }
-      .p-search_region_list > li:hover {
+      border-bottom: 1px solid #eee; }
+      .p-search_region_list > li:hover, .p-search_refine_list > li:hover {
         cursor: pointer; }
 
-.p-search_cities_list {
-  padding: 0 14px; }
+.p-search_label {
+  display: inline-block;
+  width: 100%;
+  padding: 7px 14px; }
 
 .p-search_checkbox {
+  display: inline-block;
   width: 16px;
   height: 16px;
+  margin-right: 10px;
   border: 2px solid #f04;
   color: #fff;
+  vertical-align: bottom;
   position: relative; }
-  .p-search_checkbox::after {
-    width: 8px;
-    height: 10px;
+  .p-search_checkbox::before {
+    width: 9px;
+    height: 4px;
+    transform: rotate(-45deg);
     border-left: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    transform: rotate(45deg);
     position: absolute;
-    top: 50%;
-    left: 50%; }
+    top: 10%;
+    content: ''; }
+
+.p-search_refine_list {
+  display: block; }
+  .p-search_refine_list > li {
+    padding: 10px; }
+
+.p-search_select {
+  width: 40%;
+  font-size: 16px; }
+
+.p-search_budget {
+  margin-bottom: 10px; }
 
 .is-select {
   padding: 11px;
@@ -213,6 +238,9 @@ input {
 
 .is-checked {
   background-color: #f04; }
+
+.is-open {
+  transform: rotate(135deg); }
 
 .u-cf::before, .u-cf::after {
   clear: both;
