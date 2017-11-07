@@ -57,11 +57,7 @@ input {
   display: none; }
 
 select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none; }
+  vertical-align: middle; }
 
 .header {
   background-color: #08088a; }
@@ -122,9 +118,10 @@ select {
 
 .p-search_inner {
   width: 640px;
-  position: absolute;
+  padding-bottom: 15px;
   background-color: #f04;
-  box-shadow: 0 -2px 6px #888; }
+  box-shadow: 0 -2px 6px #888;
+  position: absolute; }
 
 .p-search_setconditions_list > li {
   padding: 14px;
@@ -224,13 +221,42 @@ select {
   display: block; }
   .p-search_refine_list > li {
     padding: 10px; }
+    .p-search_refine_list > li:nth-child(2):hover {
+      cursor: default; }
+
+.p-search_refine_type {
+  margin-bottom: 10px; }
 
 .p-search_select {
   width: 40%;
+  margin-bottom: 5px;
   font-size: 16px; }
 
-.p-search_budget {
-  margin-bottom: 10px; }
+.p-search_searchbtn, .p-search_location {
+  display: block;
+  width: 90%;
+  padding: 10px 5px;
+  margin: 10px auto;
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff; }
+
+.p-search_close {
+  display: block;
+  width: 120px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff; }
+  .p-search_close_icon {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: #f04; }
 
 .is-select {
   padding: 11px;

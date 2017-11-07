@@ -74,12 +74,12 @@
             <ul class="p-search_select_list">
               <li class="js-select">
                 <a>
-                  <p class="p-search_select_txt is-select">都市を選ぶ</p>
+                  <p class="p-search_select_txt">都市を選ぶ</p>
                 </a>
               </li>
               <li class="js-select">
                 <a>
-                  <p class="p-search_select_txt">条件を絞り込む</p>
+                  <p class="p-search_select_txt is-select">条件を絞り込む</p>
                 </a>
               </li>
             </ul>
@@ -87,10 +87,28 @@
             <!-- jsonにregionとcityを作ってappendしたほうが楽だし運用しやすいんじゃね -->
             <ul class="p-search_region_list">
               <li class=" js-region">
-                <p class="p-search_region u-cf">region<span class="p-search_select_arr u-fr"></span></p>
+                <p class="p-search_region u-cf">region<span class="p-search_select_arr u-fr is-open"></span></p>
                 <ul class="p-search_cities_list">
                   <li>
-                    <input type="checkbox" id="cities"><label for="cities"><span class="p-search_checkbox is-checked"></span>cities</label>
+                    <input type="checkbox" id="cities"><label for="cities" class="p-search_label">
+                      <span class="p-search_checkbox is-checked"></span>cities (num)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="cities"><label for="cities" class="p-search_label">
+                      <span class="p-search_checkbox"></span>cities (num)</label>
+                  </li>
+                </ul>
+              </li>
+              <li class=" js-region">
+                <p class="p-search_region u-cf">region<span class="p-search_select_arr u-fr is-open"></span></p>
+                <ul class="p-search_cities_list">
+                  <li>
+                    <input type="checkbox" id="cities"><label for="cities" class="p-search_label">
+                    <span class="p-search_checkbox is-checked"></span>cities (num)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="cities"><label for="cities" class="p-search_label">
+                    <span class="p-search_checkbox"></span>cities (num)</label>
                   </li>
                 </ul>
               </li>
@@ -98,13 +116,22 @@
 
             <!-- jsonにgenre,hotword,atomosphere作る -->
             <ul class="p-search_refine_list">
-              <li>
-                <p>ジャンル</p>
-                <ul class="p-search_genre_list"></ul>
+              <li class="js-genre">
+                <p class="p-search_refine_type u-cf">ジャンル<span class="p-search_select_arr u-fr is-open"></span></p>
+                <ul class="p-search_genre_list">
+                  <li>
+                    <input type="checkbox" id="genre" checked><label for="genre" class="p-search_label">
+                    <span class="p-search_checkbox is-checked"></span>genre (num)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="genre"><label for="genre" class="p-search_label">
+                    <span class="p-search_checkbox"></span>genre (num)</label>
+                  </li>
+                </ul>
               </li>
               <li>
-                <p>予算</p>
-                <select name="budget-low">
+                <p class="p-search_refine_type">予算</p>
+                <select name="budget-low" class="p-search_select">
                   <option value="none" selected>下限なし</option>
                   <option value="1000">1,000円</option>
                   <option value="2000">2,000円</option>
@@ -117,7 +144,7 @@
                   <option value="30000">30,000円</option>
                 </select>
                 <span>～</span>
-                <select name="budget-up">
+                <select name="budget-up" class="p-search_select">
                   <option value="1000">1,000円</option>
                   <option value="2000">2,000円</option>
                   <option value="3000">3,000円</option>
@@ -131,12 +158,29 @@
                 </select>
               </li>
               <li>
-                <p>用途・雰囲気</p>
-                <ul class="p-search_atmosphere_list"></ul>
+                <p class="p-search_refine_type u-cf">用途・雰囲気<span class="p-search_select_arr u-fr is-open"></span></p>
+                <ul class="p-search_atmosphere_list">
+                  <li>
+                    <input type="checkbox" id="genre" checked><label for="genre" class="p-search_label">
+                    <span class="p-search_checkbox is-checked"></span>atmosphere (num)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="genre"><label for="genre" class="p-search_label">
+                    <span class="p-search_checkbox"></span>atmosphere (num)</label>
+                  </li>
+                </ul>
               </li>
               <li>
-                <p>HOTワード</p>
+                <p class="p-search_refine_type u-cf">HOTワード<span class="p-search_select_arr u-fr is-open"></span></p>
                 <ul class="p-search_hotword_list">
+                  <li>
+                    <input type="checkbox" id="genre" checked><label for="genre" class="p-search_label">
+                    <span class="p-search_checkbox is-checked"></span>hotword (num)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="genre"><label for="genre" class="p-search_label">
+                    <span class="p-search_checkbox"></span>hotword (num)</label>
+                  </li>
                 </ul>
               </li>
             </ul>
