@@ -6,7 +6,8 @@ $(function() {
       var json,
           appgenre,
           appatmosphere,
-          Apphotword
+          Apphotword,
+          appregion,
           arr = {"refineId": []};
 
   $('.p-search_btn').on('click', function() {
@@ -112,8 +113,8 @@ $(function() {
     dataType: 'json',
   })
   .done(function(data) {
+    appregion = data;
     setRegion(data);
-    createRestaurantRegion(data);
   })
   .fail(function() {
     console.log("error");
@@ -127,9 +128,8 @@ $(function() {
     dataType: 'json',
   })
   .done(function(data) {
+    appgenre = data;
     setRefine(data, "genre");
-
-    createRestaurantRefine(data, "genre");
   })
   .fail(function() {
     console.log("error");
@@ -143,8 +143,8 @@ $(function() {
     dataType: 'json',
   })
   .done(function(data) {
+    appatmosphere = data;
     setRefine(data, "atmosphere");
-    createRestaurantRefine(data, "atmosphere");
   })
   .fail(function() {
     console.log("error");
@@ -158,8 +158,8 @@ $(function() {
     dataType: 'json',
   })
   .done(function(data) {
+    Apphotword = data;
     setRefine(data, "hotword");
-    createRestaurantRefine(data, "hotword");
   })
   .fail(function() {
     console.log("error");
@@ -234,8 +234,6 @@ $(function() {
     cityName = item1.cities[Math.floor(Math.random()*item1.cities.length)];
 
     json = {"regionId": regionId, "cityName": cityName};
-
-    appRegion ='{<br>"regionId": '+json.regionId+',<br>"cityName": "'+json.cityName+'"<br>},<br>';
   }
 
   function createRestaurantRefine(data, type) {
@@ -245,8 +243,6 @@ $(function() {
       var id = data[type][Math.floor(Math.random()*data[type].length)].id;
 
       arr.refineId.push(id);
-      console.log(arr);
-
     }
   }
 
@@ -263,7 +259,16 @@ $(function() {
     $('footer').append(item);
   }
 
-  $('html').on('click', function() {
-    createRestaurant();
-  });
+  // $('html').on('click', function() {
+
+  //   for(var i = 0; i <= 50; i++) {
+  //     createRestaurantRegion(appregion);
+  //     createRestaurantRefine(appgenre, 'genre');
+  //     createRestaurantRefine(appatmosphere, 'atmosphere');
+  //     createRestaurantRefine(Apphotword, 'hotword');
+
+  //     createRestaurant();
+  //     arr = {"refineId": []};
+  //   }
+  // });
 });
