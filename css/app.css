@@ -235,6 +235,10 @@ select {
   display: none;
   margin-bottom: 10px; }
 
+.p-search_genre_name, .p-search_atmosphere_name, .p-search_hotword_name {
+  display: inline-block;
+  width: 200px; }
+
 .p-search_select {
   width: 40%;
   padding-bottom: 5px;

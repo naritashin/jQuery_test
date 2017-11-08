@@ -52,21 +52,21 @@
           <ul class="p-search_setconditions_list">
             <li class="u-cf">
               <p class="p-search_setconditions_txt u-fl">都市</p>
-              <ul class="p-search_setconditions_selected_list u-fl js-cities">
+              <ul class="p-search_setconditions_selected_list u-fl">
                 <li>
-                  <p class="p-search_setconditions_selected">(条件未設定)</p>
+                  <p class="p-search_setconditions_selected js-cities">(条件未設定)</p>
                 </li>
               </ul>
-              <span class="p-search_setconditions_reset u-fr">ｘ</span>
+              <span class="p-search_setconditions_reset u-fr js-region-reset">ｘ</span>
             </li>
             <li class="u-cf">
               <p class="p-search_setconditions_txt u-fl">絞込み</p>
-              <ul class="p-search_setconditions_selected_list u-fl js-refine">
+              <ul class="p-search_setconditions_selected_list u-fl">
                 <li>
-                  <p class="p-search_setconditions_selected">(条件未設定)</p>
+                  <p class="p-search_setconditions_selected js-refine">(条件未設定)</p>
                 </li>
               </ul>
-              <span class="p-search_setconditions_reset u-fr">ｘ</span>
+              <span class="p-search_setconditions_reset u-fr js-refine-reset">ｘ</span>
             </li>
           </ul>
 
@@ -87,20 +87,12 @@
             <div>
               <ul class="p-search_region_list is-active">
               </ul>
-            <!-- jsonにgenre,hotword,atomosphere作る -->
+
               <ul class="p-search_refine_list">
                 <li>
                   <p class="p-search_refine_type u-cf">ジャンル<span class="p-search_select_arr u-fr"></span></p>
                   <ul class="p-search_genre_list">
-                    <li>
-                      <input type="checkbox" id="genre1"><label for="genre1" class="p-search_label">
-                      <span class="p-search_checkbox"></span>genre (num)</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="genre2"><label for="genre2" class="p-search_label">
-                      <span class="p-search_checkbox"></span>genre (num)</label>
-                    </li>
-                  </ul>
+                 </ul>
                 </li>
                 <li>
                   <p class="p-search_refine_type">予算</p>
@@ -133,27 +125,11 @@
                 <li>
                   <p class="p-search_refine_type u-cf">用途・雰囲気<span class="p-search_select_arr u-fr"></span></p>
                   <ul class="p-search_atmosphere_list">
-                    <li>
-                      <input type="checkbox" id="atmosphere1"><label for="atmosphere1" class="p-search_label">
-                      <span class="p-search_checkbox"></span>atmosphere (num)</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="atmosphere2"><label for="atmosphere2" class="p-search_label">
-                      <span class="p-search_checkbox"></span>atmosphere (num)</label>
-                    </li>
                   </ul>
                 </li>
                 <li>
                   <p class="p-search_refine_type u-cf">HOTワード<span class="p-search_select_arr u-fr"></span></p>
                   <ul class="p-search_hotword_list">
-                    <li>
-                      <input type="checkbox" id="hotword1"><label for="hotword1" class="p-search_label">
-                      <span class="p-search_checkbox"></span>hotword (num)</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" id="hotword2"><label for="hotword2" class="p-search_label">
-                      <span class="p-search_checkbox"></span>hotword (num)</label>
-                    </li>
                   </ul>
                 </li>
               </ul>
@@ -169,6 +145,8 @@
       </div>
     </section>
   </main>
+  <footer>
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="./src/javascripts/app.js"></script>
 </body>
