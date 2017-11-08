@@ -224,6 +224,11 @@
     &_type {
       padding: 10px;
     }
+
+    &_name {
+      display: inline-block;
+      width: 200px;
+    }
   }
 
   &_genre,
@@ -234,11 +239,6 @@
       margin: {
         bottom: 10px;
       }
-    }
-
-    &_name {
-      display: inline-block;
-      width: 200px;
     }
   }
 

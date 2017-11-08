@@ -231,13 +231,13 @@ select {
 .p-search_refine_type {
   padding: 10px; }
 
+.p-search_refine_name {
+  display: inline-block;
+  width: 200px; }
+
 .p-search_genre_list, .p-search_atmosphere_list, .p-search_hotword_list {
   display: none;
   margin-bottom: 10px; }
-
-.p-search_genre_name, .p-search_atmosphere_name, .p-search_hotword_name {
-  display: inline-block;
-  width: 200px; }
 
 .p-search_select {
   width: 40%;
